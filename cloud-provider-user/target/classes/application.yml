@@ -1,0 +1,32 @@
+server.port: 8083
+spring:
+  application:
+    name: cloud-provider-user
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://172.17.127.253:3306/test_boot?Unicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123456
+    initialSize: 5
+    minIdle: 5
+    maxAdtive: 20
+    validationQuery: SELECT 1 FROM DUAL
+#    schema:
+#      - classpath:
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka/,http://eureka7002.com:7002/eureka
+  instance:
+    instance-id: user8083
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+

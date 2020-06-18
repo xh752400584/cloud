@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/cloud.iml" filepath="$PROJECT_DIR$/.idea/cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-api-common/cloud-api-common.iml" filepath="$PROJECT_DIR$/cloud-api-common/cloud-api-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-eureka-server7001/cloud-eureka-server7001.iml" filepath="$PROJECT_DIR$/cloud-eureka-server7001/cloud-eureka-server7001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-eureka-server7002/cloud-eureka-server7002.iml" filepath="$PROJECT_DIR$/cloud-eureka-server7002/cloud-eureka-server7002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-provider-crontab/cloud-provider-crontab.iml" filepath="$PROJECT_DIR$/cloud-provider-crontab/cloud-provider-crontab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-provider-payment/cloud-provider-payment.iml" filepath="$PROJECT_DIR$/cloud-provider-payment/cloud-provider-payment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-provider-payment8081/cloud-provider-payment8081.iml" filepath="$PROJECT_DIR$/cloud-provider-payment8081/cloud-provider-payment8081.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-provider-user/cloud-provider-user.iml" filepath="$PROJECT_DIR$/cloud-provider-user/cloud-provider-user.iml" />
+    </modules>
+  </component>
+</project>
