@@ -25,12 +25,19 @@
         <maven.compiler.source>l.8</maven.compiler.source>
         <maven.conpiler.target>1.8</maven.conpiler.target>
         <junit.version>4.12</junit.version>
-        <log4j.version>1.2.17</log4j.version>
         <lombok.version>1.18.8</lombok.version>
         <mysql.version>8.0.20</mysql.version>
-        <druid.version>l.1.22</druid.version>
+        <druid.version>1.1.22</druid.version>
+        <mybatis.spring.boot.version>1.3.2</mybatis.spring.boot.version>
         <mybatis.spring.boot.version>1.3.2</mybatis.spring.boot.version>
         <java.version>1.8</java.version>
+        <apache.commons.version>3.8.1</apache.commons.version>
+        <xxl.job.version>2.2.0</xxl.job.version>
+        <boot.start.web.version>2.4.4</boot.start.web.version>
+        <hutool.version>5.1.0</hutool.version>
+        <poi.version>3.17</poi.version>
+        <xhtmlrenderer.pdf.version>9.0.7</xhtmlrenderer.pdf.version>
+        <kafka.version>2.6.3</kafka.version>
     </properties>
 
     <!--子模块继承之后，锁定版本+子模块不用写 groupid 和 version -->
@@ -68,16 +75,11 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
-            <!-- Druid -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid-spring-boot-starter</artifactId>
-                <version>${druid.version}</version>
-            </dependency>
+
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
-                <version>1.1.22</version>
+                <version>${druid.version}</version>
             </dependency>
             <!-- mybatis-springboot整合 -->
             <!-- https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter -->
@@ -98,13 +100,6 @@
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
             </dependency>
-            <!-- log4j -->
-            <dependency>
-                <groupId>log4j</groupId>
-                <artifactId>log4j</artifactId>
-                <version>${log4j.version}</version>
-            </dependency>
-
             <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -115,7 +110,50 @@
             <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
-                <version>5.1.0</version>
+                <version>${hutool.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${boot.start.web.version}</version>
+            </dependency>
+            <!-- xxl job core -->
+            <dependency>
+                <groupId>com.xuxueli</groupId>
+                <artifactId>xxl-job-core</artifactId>
+                <version>${xxl.job.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apache.commons.version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.xhtmlrenderer/flying-saucer-pdf -->
+            <dependency>
+                <groupId>org.xhtmlrenderer</groupId>
+                <artifactId>flying-saucer-pdf</artifactId>
+                <version>${xhtmlrenderer.pdf.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.springframework.kafka/spring-kafka -->
+            <dependency>
+                <groupId>org.springframework.kafka</groupId>
+                <artifactId>spring-kafka</artifactId>
+                <version>${kafka.version}</version>
             </dependency>
 
 

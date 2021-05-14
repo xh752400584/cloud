@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -24,6 +25,7 @@
       <module name="cloud-provider-payment" target="1.8" />
       <module name="cloud-provider-payment8081" target="1.8" />
       <module name="cloud-provider-user" target="1.8" />
+      <module name="cloud-provider-user (1)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

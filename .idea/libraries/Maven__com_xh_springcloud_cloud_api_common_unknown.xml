@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.xh.springcloud:cloud-api-common:unknown">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/xh/springcloud/cloud-api-common/unknown/cloud-api-common-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/xh/springcloud/cloud-api-common/unknown/cloud-api-common-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/xh/springcloud/cloud-api-common/unknown/cloud-api-common-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

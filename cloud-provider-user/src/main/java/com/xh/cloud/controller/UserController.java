@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 public class UserController {
     public static final String PAYMENT_URL = "http://CLOUD-PROVIDER-PAYMENT";
 
-    @Autowired
+    @Resource
     private UserMapper userMapper;
     @Resource
     private RestTemplate restTemplate;
