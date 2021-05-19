@@ -105,7 +105,8 @@ public class ExcelUtil {
                     break;
             }
             // 设定输出文件头
-            response.setHeader(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + URLEncoder.encode(fileName, StandardCharsets.UTF_8.name()));
+            response.setHeader(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=" + URLEncoder
+                .encode(fileName, StandardCharsets.UTF_8.name()).replaceAll("\\+", "%20"));
             // 定义输出类型
             response.setContentType("application/msexcel");
             // 将普通表格数据写入workbook
