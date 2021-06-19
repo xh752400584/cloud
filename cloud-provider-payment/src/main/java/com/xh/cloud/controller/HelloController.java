@@ -8,6 +8,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
+
+/**
+ * @author xianghui
+ */
 @RestController
 @RequestMapping("/controller")
 public class HelloController {
@@ -18,19 +23,12 @@ public class HelloController {
     private IEmployeeDao iEmployeeDao;
     @Value("${server.port}")
     private String serverPort;
-//    @Autowired
-//    private Redis;
 
     @RequestMapping(value = "/hello")
     public String helloController() {
-//        List<Employee> employeeList = (List<Employee>) iEmployeeDao.findAll();
-        Employee insertEmployee = new Employee();
-        insertEmployee.setAge("24岁");
-        insertEmployee.setGender("男");
-        insertEmployee.setName("渣渣辉");
+        Employee insertEmployee = Employee.builder().id(2).age(12).gender("male").name("elephant").createTime(LocalDateTime.now()).build();
         Employee employee = iEmployeeDao.save(insertEmployee);
         return "hello spring boot:" + employee.getName() + "\r\n serverPort:" + serverPort;
-//        return "hello spring boot:";
     }
 
 }

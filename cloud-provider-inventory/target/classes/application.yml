@@ -1,0 +1,62 @@
+server.port: 9091
+spring:
+  application:
+    name: cloud-provider-inventory
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://192.168.9.255:3306/docker_mysql?Unicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123456
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate.ddl-auto: update
+    properties.hibernate.dialect : org.hibernate.dialect.MySQL5Dialect
+    open-in-view: false
+    properties:
+      hibernate.order_inserts: true
+      hibernate.order_updates: true
+      hibernate.jdbc.batch_size: 1000
+
+  # redis
+  redis:
+    host: 192.168.9.255
+    port: 6380
+    database: 0
+    password: 123456
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1ms
+
+
+  kafka:
+    consumer:
+      bootstrap-servers: 192.168.9.255:9092
+      group-id: myGroup
+      enable-auto-commit: true
+      auto-commit-interval: 100ms
+      properties:
+        session.timeout.ms: 15000
+      auto-offset-reset: latest
+      max-poll-records: 100
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka/,http://eureka7002.com:7002/eureka
+  instance:
+    instance-id: inventory
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+
+
+

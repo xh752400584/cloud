@@ -25,7 +25,7 @@ public class HelloController {
     public String helloController() {
 //        List<Employee> employeeList = (List<Employee>) iEmployeeDao.findAll();
         Employee insertEmployee = new Employee();
-        insertEmployee.setAge("24岁");
+        insertEmployee.setAge(24);
         insertEmployee.setGender("男");
         insertEmployee.setName("渣渣辉");
         Employee employee = iEmployeeDao.save(insertEmployee);

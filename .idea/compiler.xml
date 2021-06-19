@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <option name="BUILD_PROCESS_HEAP_SIZE" value="2048" />
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -11,21 +12,24 @@
         <module name="cloud-eureka-server7001" />
         <module name="cloud-eureka-server7002" />
         <module name="cloud-provider-crontab" />
+        <module name="cloud-provider-inventory" />
+        <module name="cloud-provider-leetcode" />
         <module name="cloud-provider-payment" />
         <module name="cloud-provider-payment8081" />
         <module name="cloud-provider-user" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
+    <bytecodeTargetLevel>
       <module name="cloud" target="1.8" />
       <module name="cloud-api-common" target="1.8" />
       <module name="cloud-eureka-server7001" target="1.8" />
       <module name="cloud-eureka-server7002" target="1.8" />
       <module name="cloud-provider-crontab" target="1.8" />
+      <module name="cloud-provider-inventory" target="1.8" />
+      <module name="cloud-provider-leetcode" target="1.8" />
       <module name="cloud-provider-payment" target="1.8" />
       <module name="cloud-provider-payment8081" target="1.8" />
       <module name="cloud-provider-user" target="1.8" />
-      <module name="cloud-provider-user (1)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

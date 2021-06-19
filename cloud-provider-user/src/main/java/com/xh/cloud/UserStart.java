@@ -10,6 +10,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @MapperScan(value = "com.xh.cloud.mapper")
 public class UserStart {
     public static void main(String[] args) {
-        SpringApplication.run(MQStart.class, args);
+        SpringApplication.run(UserStart.class, args);
     }
 }
